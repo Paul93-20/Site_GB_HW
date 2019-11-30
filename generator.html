@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+
+		function generatePassword(){
+			var userPasswordLength = document.getElementById("userPassword1").value;
+			var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+			var generatePass = "";
+			for(var i = 0, n = charset.length; i < userPasswordLength; ++i){
+				generatePass = generatePass + charset.charAt(Math.floor(Math.random() * n));
+			}
+		alert("Ваш пароль: " + generatePass);		
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="generator.html">Генератор паролей</a>
+</div>
+
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Генератор паролей</h1>
+
+			<div class="box">
+
+				<p>Введите длину желаемого пароля:</p>
+				<input type="text" id="userPassword1">
+
+				<br>
+				<a href="#" onClick="generatePassword()">Создать пароль</a>
+
+			</div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Vasily Pupkin
+<div>
+
+
+</body>
+</html>
